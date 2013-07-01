@@ -441,7 +441,9 @@ int __init omap4_opp_init(void)
 	omap4_mpu_opp_enable(1228800000);
 	omap4_mpu_opp_enable(1344000000);
 	omap4_mpu_opp_enable(1420800000);
+#ifdef CONFIG_TUNA_1_5_GHZ_MPU_OPP
 	omap4_mpu_opp_enable(1536000000);
+#endif
 
 	/* Update ABB settings */
 	if (cpu_is_omap446x())
